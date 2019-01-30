@@ -1,0 +1,20 @@
+<header>Yet another techie site</header>
+<nav id="logo">
+  <a href="/" id="home">BLOG</a>
+  <a href="#" id="about">THINGS</a>
+</nav>
+<%= for post <- @posts do %>
+  <div class="post">
+    <span id="title"><%= post.title %></span>
+    <span id="body"><%=raw post.body %></span>
+    <span id="footer"><%= post.updated_at %><span>
+  </div>
+<% end %>
+<footer>
+  <a href="https://github.com/f1sty">github</a>
+  <a href="https://gitlab.com/f1st">gitlab</a>
+  <a href="https://bitbucket.org/f1st/">bitbucket</a>
+  <a href="https://twitter.com/f1sty">twitter</a>
+  <a href="https://www.instagram.com/f1sty/">instagram</a><br><br><br>
+  Copyright © 2019 Yurii Skrynnykov
+</footer>

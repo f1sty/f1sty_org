@@ -1,0 +1,92 @@
+html {
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 12px;
+    background-color: #23334c;
+    color: #84ad80;
+}
+
+body {
+    width: 800px;
+    margin: 0 auto;
+    padding: 0 20px 20px 20px;
+}
+
+a {
+    color: #84ad80;
+}
+
+a:hover {
+    color: #823953;
+}
+
+header {
+    margin: 0;
+    padding: 20px 0;
+    font-size: 60px;
+    text-align: center;
+}
+
+nav {
+    background-color: #23334c;
+    background-image: url("/images/logo.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: 54px;
+    width: 800px;
+    display: table;
+    margin-bottom: 54px;
+}
+
+nav a {
+    font-size: 26px;
+    text-decoration: none;
+    vertical-align: middle;
+    display: table-cell;
+    height: 100%;
+    width: 50%;
+    padding: 0 32px 0 32px;
+}
+
+nav #home {
+    text-align: left;
+}
+
+nav #about {
+    text-align: right;
+}
+
+.post #body {
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    display: block;
+    border-width: 2px;
+    border-color: #84ad80;
+    border-bottom-style: dashed;
+    border-top-style: dashed;
+}
+
+.post #title, .post #footer {
+    display: block;
+    margin: 4px 0;
+    padding: 0 4px;
+    border-width: 2px;
+    border-color: #84ad80;
+}
+
+.post #title {
+    font-size: 18px;
+    border-left-style: dashed;
+}
+
+.post #footer {
+    font-size: 16px;
+    border-right-style: dashed;
+    text-align: right;
+    margin-bottom: 54px;
+}
+
+footer {
+    margin-top: 100px;
+    text-align: center;
+}
