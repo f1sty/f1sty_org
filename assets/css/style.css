@@ -1,14 +1,13 @@
 html {
-    font-family: 'Anonymous Pro', monospace;
     font-size: 12px;
+    font-family: 'Anonymous Pro', monospace;
     background-color: #23334c;
     color: #84ad80;
 }
 
 body {
-    width: 800px;
     margin: 0 auto;
-    padding: 0 20px 20px 20px;
+    width: 800px;
 }
 
 a {
@@ -20,73 +19,74 @@ a:hover {
 }
 
 header {
-    margin: 0;
-    padding: 20px 0;
     font-size: 60px;
+    margin: 0;
+    padding: 0.3em 0;
     text-align: center;
 }
 
 nav {
-    background-color: #23334c;
-    background-image: url("/images/logo.png");
-    background-repeat: no-repeat;
-    background-size: auto;
-    height: 54px;
+    margin-bottom: 5em;
     width: 800px;
+    height: 54px;
+    background-image: url("/images/logo.png");
     display: table;
-    margin-bottom: 54px;
 }
 
 nav a {
     font-size: 26px;
+    padding: 0 1.23em;
+    width: 50%;
+    height: 100%;
     text-decoration: none;
     vertical-align: middle;
     display: table-cell;
-    height: 100%;
-    width: 50%;
-    padding: 0 32px 0 32px;
 }
 
-nav #home {
+nav #blog {
     text-align: left;
 }
 
-nav #about {
+nav #things {
     text-align: right;
 }
 
-.post #body {
+#body {
     font-size: 16px;
-    line-height: 1.2;
-    letter-spacing: 1px;
-    display: block;
+    padding: 0.5em 0;
+    text-indent: 2em;
+    line-height: 1.2em;
+    letter-spacing: 0.06em;
     border-width: 2px;
     border-color: #84ad80;
     border-bottom-style: dashed;
     border-top-style: dashed;
-}
-
-.post #title, .post #footer {
     display: block;
-    margin: 4px 0;
-    padding: 0 4px;
-    border-width: 2px;
-    border-color: #84ad80;
 }
 
-.post #title {
-    font-size: 18px;
+#title, #footer {
+    font-size: 16px;
+    margin: 0.25em 0;
+    padding: 0 0.25em;
+    border-width: 2px;
+    display: block;
+}
+
+#title {
     border-left-style: dashed;
 }
 
-.post #footer {
-    font-size: 16px;
+#footer {
+    margin-bottom: 3em;
     border-right-style: dashed;
     text-align: right;
-    margin-bottom: 54px;
+}
+
+#login {
+    text-align: center;
 }
 
 footer {
-    margin-top: 100px;
+    margin-top: 10em;
     text-align: center;
 }

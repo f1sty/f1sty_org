@@ -1,0 +1,5 @@
+<%= form_for @conn, Routes.admin_admin_path(@conn, :login), [as: :login, id: "login"], fn f -> %>
+  <%= text_input f, :username, placeholder: "username" %>
+  <%= password_input f, :password, placeholder: "password" %>
+  <%= submit "login" %>
+<% end %>

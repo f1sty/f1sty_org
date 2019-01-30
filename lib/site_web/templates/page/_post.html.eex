@@ -1,0 +1,5 @@
+<div class="post">
+  <span id="title"><%= @post.title %></span>
+  <span id="body"><%= raw @post.body %></span>
+  <span id="footer"><%= Timex.local(@post.updated_at) |> Timex.format!("%d-%m-%Y %T", :strftime) %><span>
+</div>

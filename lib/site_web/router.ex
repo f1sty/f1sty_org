@@ -9,6 +9,10 @@ defmodule SiteWeb.Router do
     plug :put_secure_browser_headers
   end
 
+  pipeline :auth do
+    plug :forbidden
+  end
+
   pipeline :api do
     plug :accepts, ["json"]
   end
@@ -23,11 +27,26 @@ defmodule SiteWeb.Router do
     pipe_through :browser
 
     get "/", AdminController, :index
-    resources "/posts", PostController
+    get "/logout", AdminController, :logout
+    post "/", AdminController, :login
+
+    scope "/posts" do
+      pipe_through :auth
+
+      resources "/", PostController
+    end
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", SiteWeb do
-  #   pipe_through :api
-  # end
+  def forbidden(conn, _opts) do
+    alias SiteWeb.Router.Helpers, as: Routes
+    alias SiteWeb.Endpoint
+
+    case get_session(conn, :signed_in) do
+      true -> conn
+      _ ->
+        conn
+        |> Phoenix.Controller.redirect(to: Routes.admin_admin_path(Endpoint, :index))
+        |> halt()
+    end
+  end
 end
