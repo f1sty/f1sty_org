@@ -1,5 +1,5 @@
 <header><%= @title %></header>
 <nav id="logo">
   <%= link "BLOG", to: Routes.page_path(@conn, :index), id: "blog" %>
-  <%= link "CREATE", to: Routes.admin_post_path(@conn, :index), id: "things" %>
+  <%= link "THINGS", to: Routes.admin_post_path(@conn, :index), id: "things" %>
 </nav>
