@@ -31,25 +31,22 @@ nav {
     width: 800px;
     height: 54px;
     background-image: url("/images/logo.png");
-    display: table;
+    vertical-align: middle;
 }
 
 nav a {
     font-size: 26px;
-    padding: 0 1.23em;
-    width: 50%;
-    height: 100%;
     text-decoration: none;
     vertical-align: middle;
-    display: table-cell;
+    padding: 0.55em 1.15em;
 }
 
 nav #blog {
-    text-align: left;
+    float: left;
 }
 
 nav #things {
-    text-align: right;
+    float: right;
 }
 
 #body {
